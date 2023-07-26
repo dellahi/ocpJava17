@@ -1,3 +1,5 @@
+package BasicLambdas;
+
 import FunctionalInterfaces.Evaluate;
 import FunctionalInterfaces.Functionable;
 import FunctionalInterfaces.Printable;

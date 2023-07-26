@@ -1,3 +1,5 @@
+package BasicLambdas;
+
 public class Person {
 
     private String name;
@@ -39,6 +41,6 @@ public class Person {
     }
 
     public String toString(){
-        return  "Person{" + "age=" + age + ", name=" + name + ", height=" + heigth + '}';
+        return  "BasicLambdas.Person{" + "age=" + age + ", name=" + name + ", height=" + heigth + '}';
     }
 }
