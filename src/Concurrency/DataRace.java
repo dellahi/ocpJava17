@@ -5,9 +5,9 @@ public class DataRace {
     
     public static void addToCounter(){
         int c = count;
-        System.out.println("Before. "+count + ". Thread id: "+Thread.currentThread().threadId());
+        System.out.println("Before. "+count + ". Thread id: "+Thread.currentThread().getName());
         count = c + 1; // not atomic
-        System.out.println("After. "+count + ". Thread id: "+Thread.currentThread().threadId());
+        System.out.println("After. "+count + ". Thread id: "+Thread.currentThread().getName());
     } 
     public static void main(String[] args) {
         for(int i=1; i<=10; i++){

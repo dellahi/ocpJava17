@@ -12,9 +12,9 @@ public class FixRaceWithLock {
             try{
 //                lock.lock(); // blocking call
                 int c = count;
-                System.out.println("Before. "+count + ". Thread id: "+Thread.currentThread().threadId());
+                System.out.println("Before. "+count + ". Thread id: "+Thread.currentThread().getName());
                 count = c + 1; // not atomic
-                System.out.println("After. "+count + ". Thread id: "+Thread.currentThread().threadId());
+                System.out.println("After. "+count + ". Thread id: "+Thread.currentThread().getName());
             } finally{
                 lock.unlock();// return the lock
             }

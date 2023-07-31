@@ -31,7 +31,7 @@ public class ScheduledExecutors {
         // 300 msecs is the time to wait from when the previous task finishes to starting the next task
         //  => previous task finishes - wait 300msecs - start next task
         final long INITIAL_DELAY = 2000, WAIT_PERIOD_AFTER_PREVIOUS_TASK_FINISHED=300;
-        schedES.scheduleWithFixedDelay(() -> System.out.println("Thread id: "+Thread.currentThread().threadId()),
+        schedES.scheduleWithFixedDelay(() -> System.out.println("Thread id: "+Thread.currentThread().getName()),
                                        INITIAL_DELAY, WAIT_PERIOD_AFTER_PREVIOUS_TASK_FINISHED, TimeUnit.MILLISECONDS);
        // schedES.shutdown(); // if I shut it down, nothing happens
     }
@@ -43,7 +43,7 @@ public class ScheduledExecutors {
         //       task 3 starts at 2000msecs + (500 msecs * 2)   = 3000msecs
         //       task 4 starts at 2000msecs + (500 msecs * 3)   = 3500msecs and so on...
         final long INITIAL_DELAY = 2000, WAIT_PERIOD_BEFORE_STARTING_NEXT_TASK=300;
-        schedES.scheduleAtFixedRate(() ->   System.out.println("Thread id: "+Thread.currentThread().threadId()),
+        schedES.scheduleAtFixedRate(() ->   System.out.println("Thread id: "+Thread.currentThread().getName()),
                                             INITIAL_DELAY, WAIT_PERIOD_BEFORE_STARTING_NEXT_TASK, TimeUnit.MILLISECONDS);
         //schedES.shutdown(); // if I shut it down, nothing happens
     }
